@@ -33,27 +33,27 @@ That said, **how long does it take to translate the name to IP**. Download the [
 
 ```go
 func main() {
-	var start, dns time.Time
-	var took, dnsTook time.Duration
+   var start, dns time.Time
+   var took, dnsTook time.Duration
 
-	ct := &httptrace.ClientTrace{
-		DNSStart: func(info httptrace.DNSStartInfo) {
+   ct := &httptrace.ClientTrace{
+   DNSStart: func(info httptrace.DNSStartInfo) {
          dns = time.Now()
       },
-		DNSDone:  func(info httptrace.DNSDoneInfo) {
+   DNSDone:  func(info httptrace.DNSDoneInfo) {
          dnsTook = time.Since(dns)
       },
-	}
-	req, _ := http.NewRequest(http.MethodGet, "https://httpbin.org/", nil)
-	ctCtx := httptrace.WithClientTrace(req.Context(), ct)
-	req = req.WithContext(ctCtx)
-	start = time.Now()
-	_, err := http.DefaultClient.Do(req)
-	if err != nil {
-		log.Fatal(err)
-	}
-	took = time.Since(start)
-	fmt.Printf("total %dms, dns %dms\n",
+   }
+   req, _ := http.NewRequest(http.MethodGet, "https://httpbin.org/", nil)
+   ctCtx := httptrace.WithClientTrace(req.Context(), ct)
+   req = req.WithContext(ctCtx)
+   start = time.Now()
+   _, err := http.DefaultClient.Do(req)
+   if err != nil {
+   log.Fatal(err)
+   }
+   took = time.Since(start)
+   fmt.Printf("total %dms, dns %dms\n",
       took.Milliseconds(), dnsTook.Milliseconds()
    )
 }
