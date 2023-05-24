@@ -2,3 +2,21 @@ baseURL = 'https://codewiththiago.thiagonbcarvalho.com/'
 languageCode = 'en-us'
 title = 'Code With thiaGo'
 theme = 'ananke'
+[params]
+  text_color = ""
+  author = "Thiago Nache Carvalho"
+  favicon = ""
+  site_logo = ""
+  description = "The last theme you'll ever need. Maybe."
+  background_color_class = "bg-black"
+  recent_posts_number = 5
+  [params.ananke_socials]
+    [params.ananke_socials.twitter]
+    name = "twitter"
+    url = "https://twitter.com/thiagonache"
+    [params.ananke_socials.linkedin]
+    name = "linkedin"
+    url = "https://linkedin.com/in/thiagonache"
+    [params.ananke_socials.github]
+    name = "github"
+    url = "https://github.com/thiagonache"
