@@ -1,0 +1,4 @@
+baseURL = 'https://codewiththiago.thiagonbcarvalho.com/'
+languageCode = 'en-us'
+title = 'Code With thiaGo'
+theme = 'ananke'
