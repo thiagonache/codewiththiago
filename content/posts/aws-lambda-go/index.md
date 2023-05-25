@@ -150,7 +150,7 @@ After answering these questions, we can come up with the following function
 signature:
 
 ```go
-func Handler(ctx context.Contenxt, input events.SomeType) (events.SomeType, error)
+func Handler(ctx context.Context, input events.SomeType) (events.SomeType, error)
 ```
 
 Now, we need to figure out the types for these two events.
