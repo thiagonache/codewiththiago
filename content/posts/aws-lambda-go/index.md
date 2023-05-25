@@ -1,6 +1,6 @@
 ---
 title: "AWS Lambda Functions"
-date: 2023-05-25T11:09:26-03:00
+date: 2023-05-24T11:09:26-03:00
 draft: false
 ---
 
