@@ -122,8 +122,8 @@ the browser. With that in mind, let's consider the code we need to write:
 
 ### Handler function signature
 
-Before starting any code, we need to understand and define the handler function
-signature. Do you remember the rules, don't you? If not, please refer to this
+Before starting to write any code, we need to understand and define the handler function
+signature. You remember the rules, don't you? If not, please refer to this
 [link](https://pkg.go.dev/github.com/aws/aws-lambda-go/lambda#Start).
 
 1. First, it needs to be a function, obviously.
