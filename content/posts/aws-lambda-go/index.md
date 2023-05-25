@@ -64,9 +64,9 @@ Now, let's delve into what `TIn` and `TOut` are, but basically, they represent *
 ## Events
 
 The package [events](https://pkg.go.dev/github.com/aws/aws-lambda-go/events)
-define all event types possibles to receive and return within a Lambda. Some are
-event types to be used as input (TIn) and some are event types to be used as
-output (TOut).
+defines all possible event types to be received and returned within a Lambda.
+Some are event types to be used as input (TIn), and some are event types to be
+used as output (TOut).
 
 ## Context
 
@@ -77,7 +77,7 @@ and perform necessary actions or cleanup tasks accordingly. The context serves
 as a conduit for sharing critical information and facilitates the graceful
 handling of server termination scenarios.
 
-Lambda implement the following types:
+Lambda implements the following types:
 
 ```go
 type LambdaFunctionURLRequestContext struct {
@@ -110,13 +110,13 @@ LambdaFunctionURLRequestContextHTTPDescription contains HTTP information for the
 
 ## Scenario
 
-Imagine that we are writing a Lambda that will receive an HTTP POST
+Imagine that we are writing a Lambda function that will receive an HTTP POST
 request from an HTML form, send a message to a queue, and return HTML back to
 the browser. With that in mind, let's consider the code we need to write:
 
 1. Parse the POST data.
-2. Call the AWS API to send the message to a given queue.
-3. Write HTML back to caller.
+2. Call the AWS API to send the message to a specified queue.
+3. Write HTML back to the caller.
 
 ## Code
 
@@ -197,21 +197,20 @@ Function URL for the request.
 
 ### Prototyping
 
-If you are not sure what to set on each of these fields, whether it is the first
-time you are coding a Lambda in Go or whether you are working with a different
-scenario that involves a type you have never worked with before, first, keep in
-mind that all events are JSON.
+If you are not sure what to set for each of these fields, whether it is your
+first time coding a Lambda in Go or if you are working with a different scenario
+involving a type you have never worked with before, remember that all events are
+JSON.
 
-Also, It's completely fine to do some prototyping, but
-don't forget that our goal is to work with a test-first mindset.
+Also, it's perfectly fine to do some prototyping, but don't forget that our goal
+is to work with a test-first mindset.
 
 ### Returning error
 
-Before we can start to code, I need to cover one more thing that I consider very
-helpful from the Lambda server, it is the ability of returning errors from the
-Handler.
+Before we can start coding, I need to cover one more thing that I consider very
+helpful from the Lambda server: the ability to return errors from the Handler.
 
-Returning error from inside of the Lambda means the following:
+Returning an error from inside the Lambda means the following:
 
 1. The response status code is set to int `http.StatusInternalServerError` (500).
 2. The response body is set to string `Internal Server Error`.
