@@ -229,8 +229,8 @@ files:
 - mypackage -> Go module root directory
 - mypackage/go.mod -> Go mod file
 - mypackage/go.sum -> Go checksum file
-- mypacakge/mypackage_test.go -> Empty file with mypackage_test package
-- mypacakge/mypackage.go -> Empty file with mypackage package
+- mypackage/mypackage_test.go -> Empty file with mypackage_test package
+- mypackage/mypackage.go -> Empty file with mypackage package
 ```
 
 Our first step is to parse the POST data sent via a form. In order to test
