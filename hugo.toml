@@ -1,8 +1,9 @@
 baseURL = 'https://codewiththiago.thiagonbcarvalho.com/'
 languageCode = 'en-us'
-title = 'Code With thiaGo'
+title = 'Code with thiaGo'
 theme = 'ananke'
 [params]
+  show_reading_time = true
   text_color = ""
   author = "Thiago Nache Carvalho"
   favicon = ""
