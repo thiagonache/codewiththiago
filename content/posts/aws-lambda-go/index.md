@@ -43,7 +43,7 @@ can be used as a handler in a Go program using the default HTTP server.
 
 Everything starts by running
 [Start](https://pkg.go.dev/github.com/aws/aws-lambda-go/lambda#Start) from the
-[aws-lambda-go](github.com/aws/aws-lambda-go/lambda) package. The
+[aws-lambda-go](https://github.com/aws/aws-lambda-go/lambda) package. The
 signature of the Start function is as follows:
 
 ```go
